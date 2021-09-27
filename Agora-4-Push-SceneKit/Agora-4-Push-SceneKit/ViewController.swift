@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         var agSettings = AgoraSettings()
-        agSettings.externalVideoSource = AgoraSettings.ExternalVideoSettings(
+        agSettings.externalVideoSettings = AgoraSettings.ExternalVideoSettings(
             enabled: true, texture: true, encoded: false
         )
         agSettings.enabledButtons = [.cameraButton, .micButton]
@@ -79,14 +79,13 @@ class ViewController: UIViewController {
     open func setARConfiguration() {
         let configuration = ARWorldTrackingConfiguration()
         // run the config to start the ARSession
-        self.sceneView.session.run(configuration)
         self.arvkRenderer?.prepare(configuration)
     }
 
 }
 
 extension ViewController: RenderARDelegate {
-    // MARK: ARVidoeKit Renderer
+    // MARK: ARVideoKit Renderer
     open func frame(didRender buffer: CVPixelBuffer, with time: CMTime, using rawBuffer: CVPixelBuffer) {
         let videoFrame = AgoraVideoFrame()
         videoFrame.format = 12
