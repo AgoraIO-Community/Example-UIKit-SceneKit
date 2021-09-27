@@ -188,7 +188,6 @@ If you also want to stream audio from SceneKit, there are a couple more settings
 
 - Within Agora UIKit, add the setting for `externalAudioSource` to enabled.
 - In the ARWorldTrackingConfiguration, you need to set the `providesAudioData` to `true`.
-
 - Add the ARSessionDelegate method [didOutputAudioSampleBuffer](https://developer.apple.com/documentation/arkit/arsessionobserver/2923544-session).
 - Call [pushExternalAudioFrameSampleBuffer](https://docs.agora.io/en/All/API%20Reference/oc/Classes/AgoraRtcEngineKit.html#//api/name/pushExternalAudioFrameSampleBuffer:) on the Agora engine instance.
 
