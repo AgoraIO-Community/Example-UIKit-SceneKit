@@ -122,7 +122,7 @@ Now we need to join the Agora Video channel using Agora UIKit.
 
 We need to tell the engine that we will be using an external camera, otherwise Agora UIKit will immediately go for the default builtin cameras.
 
-Inside AgoraSettings there is a setting for this called `externalVideoSettings`. This property can tell the engine that an external video source should be used, and also tells the engine a few details about it, including whether it is textured video data, and if the video source is encoded.
+Inside AgoraSettings there is a setting for this called [`externalVideoSettings`](https://github.com/AgoraIO-Community/iOS-UIKit/blob/2f147953b3cbe0016b8ca0bbd955029daf192fc6/Sources/Agora-UIKit/AgoraSettings.swift#L97). This property can tell the engine that an external video source should be used, and also tells the engine a few details about it, including whether it is textured video data, and if the video source is encoded.
 
 In our case, textured video data is used, and the source is not encoded. We also don't want to show the option to flip the camera, so the settings property gets created like this:
 
@@ -186,7 +186,7 @@ Then we grab the `AgoraRtcEngineKit` instance through the `AgoraVideoViewer` cla
 
 If you also want to stream audio from SceneKit, there are a couple more settings that need to happen.
 
-- Within Agora UIKit, add the setting for `externalAudioSource` to enabled.
+- Within Agora UIKit, add the setting for [`externalAudioSettings`](https://github.com/AgoraIO-Community/iOS-UIKit/blob/2f147953b3cbe0016b8ca0bbd955029daf192fc6/Sources/Agora-UIKit/AgoraSettings.swift#L133) to enabled.
 - In the ARWorldTrackingConfiguration, you need to set the `providesAudioData` to `true`.
 - Add the ARSessionDelegate method [didOutputAudioSampleBuffer](https://developer.apple.com/documentation/arkit/arsessionobserver/2923544-session).
 - Call [pushExternalAudioFrameSampleBuffer](https://docs.agora.io/en/All/API%20Reference/oc/Classes/AgoraRtcEngineKit.html#//api/name/pushExternalAudioFrameSampleBuffer:) on the Agora engine instance.
