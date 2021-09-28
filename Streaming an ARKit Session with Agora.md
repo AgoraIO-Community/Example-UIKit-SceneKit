@@ -168,17 +168,17 @@ extension ViewController: RenderARDelegate {
     didRender buffer: CVPixelBuffer, with time: CMTime,
     using rawBuffer: CVPixelBuffer
   ) {
+    // Create a new AgoraVideoFrame
     let videoFrame = AgoraVideoFrame()
-    videoFrame.format = 12
-    videoFrame.textureBuf = buffer
-    videoFrame.time = time
+    videoFrame.format = 12 // format 12 means iOS texture (CVPixelBufferRef)
+    videoFrame.textureBuf = buffer // set the texture buffer to our CVPixelBuffer
+    videoFrame.time = time // assign the timestamp
 
+    // Push the AgoraVideoFrame to the Agora engine
     self.agoraView?.agkit.pushExternalVideoFrame(videoFrame)
   }
 }
 ```
-
-For the format, `12` means that we are using an iOS texture (CVPixelBufferRef). The textureBuf is our incoming pixel buffer,a nd time is also provided by the RenderARDelegate method, so add that to the AgoraVideoFrame.
 
 Then we grab the `AgoraRtcEngineKit` instance through the `AgoraVideoViewer` class, and push the video frame to it.
 
