@@ -7,7 +7,7 @@
 
 import UIKit
 import ARKit
-import AgoraUIKit_iOS
+import AgoraUIKit
 import AgoraRtcKit
 import ARVideoKit
 
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         let agoraView = AgoraVideoViewer(
             connectionData: AgoraConnectionData(
                 appId: <#Agora App ID#>,
-                appToken: <#Agora Token or nil#>
+                rtcToken: <#Agora Token or nil#>
             ),
             style: .collection,
             agoraSettings: agSettings

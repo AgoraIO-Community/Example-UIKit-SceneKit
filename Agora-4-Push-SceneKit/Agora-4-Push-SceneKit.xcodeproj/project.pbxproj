@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3C4DA12291BF95A00528441 /* AgoraUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3C4DA11291BF95A00528441 /* AgoraUIKit */; };
 		F3F8C24826FB7E39009DD844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F8C24726FB7E39009DD844 /* AppDelegate.swift */; };
 		F3F8C24A26FB7E39009DD844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F8C24926FB7E39009DD844 /* SceneDelegate.swift */; };
 		F3F8C24C26FB7E39009DD844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F8C24B26FB7E39009DD844 /* ViewController.swift */; };
@@ -14,14 +15,13 @@
 		F3F8C25126FB7E40009DD844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F8C25026FB7E40009DD844 /* Assets.xcassets */; };
 		F3F8C25426FB7E40009DD844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F8C25226FB7E40009DD844 /* LaunchScreen.storyboard */; };
 		F3F8C25D26FB804A009DD844 /* ARVideoKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3F8C25C26FB804A009DD844 /* ARVideoKit */; };
-		F3F8C26026FB8081009DD844 /* AgoraUIKit_iOS in Frameworks */ = {isa = PBXBuildFile; productRef = F3F8C25F26FB8081009DD844 /* AgoraUIKit_iOS */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F3F8C24426FB7E39009DD844 /* Agora-4-Push-SceneKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Agora-4-Push-SceneKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F8C24726FB7E39009DD844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F8C24926FB7E39009DD844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F3F8C24B26FB7E39009DD844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F3F8C24B26FB7E39009DD844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		F3F8C24E26FB7E39009DD844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F8C25026FB7E40009DD844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F8C25326FB7E40009DD844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F8C26026FB8081009DD844 /* AgoraUIKit_iOS in Frameworks */,
+				F3C4DA12291BF95A00528441 /* AgoraUIKit in Frameworks */,
 				F3F8C25D26FB804A009DD844 /* ARVideoKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,11 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F3C4DA10291BF95A00528441 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F3F8C23B26FB7E39009DD844 = {
 			isa = PBXGroup;
 			children = (
 				F3F8C24626FB7E39009DD844 /* Agora-4-Push-SceneKit */,
 				F3F8C24526FB7E39009DD844 /* Products */,
+				F3C4DA10291BF95A00528441 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,7 +97,7 @@
 			name = "Agora-4-Push-SceneKit";
 			packageProductDependencies = (
 				F3F8C25C26FB804A009DD844 /* ARVideoKit */,
-				F3F8C25F26FB8081009DD844 /* AgoraUIKit_iOS */,
+				F3C4DA11291BF95A00528441 /* AgoraUIKit */,
 			);
 			productName = "Agora-4-Push-SceneKit";
 			productReference = F3F8C24426FB7E39009DD844 /* Agora-4-Push-SceneKit.app */;
@@ -391,21 +399,21 @@
 			repositoryURL = "https://github.com/AgoraIO-Community/iOS-UIKit";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = "4.0.0-preview.3";
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F3C4DA11291BF95A00528441 /* AgoraUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3F8C25E26FB8081009DD844 /* XCRemoteSwiftPackageReference "iOS-UIKit" */;
+			productName = AgoraUIKit;
+		};
 		F3F8C25C26FB804A009DD844 /* ARVideoKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F3F8C25B26FB804A009DD844 /* XCRemoteSwiftPackageReference "ARVideoKit" */;
 			productName = ARVideoKit;
-		};
-		F3F8C25F26FB8081009DD844 /* AgoraUIKit_iOS */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F3F8C25E26FB8081009DD844 /* XCRemoteSwiftPackageReference "iOS-UIKit" */;
-			productName = AgoraUIKit_iOS;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
